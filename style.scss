@@ -26,13 +26,14 @@ $colorBlue: #4990E2;
 }
 
 body {
-    padding: 30px 50px 106px;
+    padding: 20px 15px 50px;
+    margin: 0;
 }
 
 .filter-devices {
     h6 {
         @include basicSettings;
-        margin-bottom: 16px;//
+        margin: 0 0 16px 0;//
         font-size: 16px;//
     
         color: #8C8C8C;//
@@ -154,7 +155,7 @@ section {
                     @include creatCircle(10px, 0px, $colorBlue);
                     content: '';
                     position: absolute;
-                    top: 14%;
+                    top: 16%;
                     left: 5px;
                     opacity: 0;
                     transition: .2s;
@@ -209,6 +210,9 @@ section {
 }
 
 @media screen and (min-width: 750px) {
+    body {
+        padding: 30px 50px 106px;
+    }
     section {
         display: flex;
     }
