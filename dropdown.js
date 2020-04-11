@@ -3,7 +3,7 @@
 function DropBlock(val) {
   return `<div class="elem" id="${val}">${val}</div>`;
 }
-
+// dropdown list to select the reporting period
 function DropMenu() {
   let peoples = ['1 week', '1 month', '3 month'];
   return `<div class="title-dropmenu"> <span class="start-text "> 1 month </span>
@@ -47,7 +47,6 @@ list.click((el) => {
 });
 
 $('body').click((el) => {
-  console.log(el);
   if (!(el.target.classList[0] === 'dropdown' || el.target.classList[0] === 'dropmenu' 
     || el.target.classList[0] === 'start-text'|| el.target.classList[0] === 'icon' 
     || el.target.classList[0] === 'title-dropmenu')) {
