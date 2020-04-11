@@ -293,7 +293,12 @@ section {
 
         td {
             padding: 20px 0 15px 0;
-            border-bottom: 1px dashed $colorGray;
+        }
+
+        tr:not(:last-child) {
+            td {
+                border-bottom: 1px dashed $colorGray;
+            }
         }
 
         td:nth-child(1) {

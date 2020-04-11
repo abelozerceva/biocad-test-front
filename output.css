@@ -225,7 +225,8 @@ section {
     color: #353535;
     vertical-align: top; }
     .report tbody td {
-      padding: 20px 0 15px 0;
+      padding: 20px 0 15px 0; }
+    .report tbody tr:not(:last-child) td {
       border-bottom: 1px dashed #E9E9E9; }
     .report tbody td:nth-child(1) {
       font-size: 16px;
