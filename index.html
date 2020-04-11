@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="font/stylesheet.css" >
 
@@ -52,15 +53,15 @@
 
             <div class="report-filters">
                 <form action="">
-                    <select name="period" id="period">
-                        <option value="">1 week</option>
-                        <option value="" selected>1 month</option>
-                        <option value="">3 month</option>
-                    </select>
-                    <!-- <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 0H0L5.15152 6.3L10 0Z" fill="#8C8C8C"/>
-                    </svg> -->
-                    <div>
+                    <div class="dropdown">
+                        <select name="period" id="period">
+                            <option value="1 week">1 week</option>
+                            <option value="1 month" selected>1 month</option>
+                            <option value="3 month">3 month</option>
+                        </select>
+                    </div>
+
+                    <div class="radio-filter">
                         <p class="radio-item"> 
                             <input type="radio" name="group1" class="radio" id="calibration" value="calibration" checked>
                             <label for="calibration"> Calibration </label>
@@ -122,11 +123,50 @@
     </section>
 
     <div class="report">
-
+        <table>
+            <caption>Calibration report</caption>
+            <thead>
+                <th class="col1"> Data</th>
+                <th class="col2"> Used buffer solutions</th>
+                <th class="col3"> Slope, % <br> Norm 95-105</th>
+                <th class="col4"> Offset, mV  <br>  Norm ±(0-20)</th>
+                <th class="col5"> User</th2fr;">
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 04.10.19 <br> 10:23 </td>
+                    <td> В1: № 2000460789536: pH 1.09<br>
+                        В2: № 2000460789536: pH 2.00<br>
+                        В3: № 2000460789536: pH 4.01<br>
+                        В4: № 2000460789536: pH 7.00<br>
+                        В5: № 2000460789536: pH 9.21 </td>
+                    <td> 
+                        <table>
+                            <td> 98.7 </td>
+                            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 0C3.58892 0 0 3.58862 0 8C0 12.4114 3.58892 16 8 16C12.4111 16 16 12.4114 16 8C16 3.58862 12.4111 0 8 0ZM12.46 5.332L7.53692 10.8705C7.41569 11.0068 7.24677 11.0769 7.07662 11.0769C6.94154 11.0769 6.80585 11.0326 6.69231 10.9422L3.61538 8.48062C3.35015 8.26862 3.30708 7.88123 3.51938 7.61569C3.73138 7.35015 4.11908 7.30708 4.38431 7.51938L7.00492 9.61569L11.54 4.51385C11.7652 4.25969 12.1548 4.23692 12.4086 4.46277C12.6628 4.68892 12.6858 5.07785 12.46 5.332Z" fill="#6BAE45"/>
+                                </svg>
+                            </td>
+                        </table>
+                    </td>
+                    <td> 
+                        <table>
+                            <td> -0.3 </td>
+                            <td><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 0C3.58892 0 0 3.58862 0 8C0 12.4114 3.58892 16 8 16C12.4111 16 16 12.4114 16 8C16 3.58862 12.4111 0 8 0ZM12.46 5.332L7.53692 10.8705C7.41569 11.0068 7.24677 11.0769 7.07662 11.0769C6.94154 11.0769 6.80585 11.0326 6.69231 10.9422L3.61538 8.48062C3.35015 8.26862 3.30708 7.88123 3.51938 7.61569C3.73138 7.35015 4.11908 7.30708 4.38431 7.51938L7.00492 9.61569L11.54 4.51385C11.7652 4.25969 12.1548 4.23692 12.4086 4.46277C12.6628 4.68892 12.6858 5.07785 12.46 5.332Z" fill="#6BAE45"/>
+                                </svg>
+                            </td>
+                        </table>
+                    </td>
+                    <td> Иванов Генадий Петрович </td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
 
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="dropdown.js"></script>
     
 </body>
 </html>

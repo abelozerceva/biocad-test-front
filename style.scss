@@ -2,6 +2,7 @@ $colorBlack: #353535;
 $colorWhite: #FFFFFF;
 $colorBorder: #C1C1C1;
 $colorBlue: #4990E2;
+$colorGray: #E9E9E9;
 
 @mixin basicSettings() { 
     line-height: 24px;
@@ -42,7 +43,6 @@ body {
     .search-device {
         display: flex;
         align-items: center;
-        // margin-bottom: 10px;
 
         button {
             @include basicSettings;
@@ -76,7 +76,7 @@ body {
 }
 
 section {
-    margin-top: 30px;
+    margin: 30px 0 46px 0;
     display: block;
 }
 
@@ -119,10 +119,44 @@ section {
         font-size: 16px;
         color: $colorBlack;
         background: $colorWhite;//
-
     }
 
-    div {
+    .title-dropmenu {
+        width: 220px;
+        height: 30px;
+        font-size: 16px;
+        color: $colorBlack;
+        background: $colorWhite;//
+        border: 1px solid $colorGray;
+        box-sizing: border-box;
+        padding: 4px 0 4px 12px;
+        margin: 0;
+
+        .icon {
+            position: relative;
+            left: 187px;
+            transform: translateY(-300%);
+        }
+        .active {
+            transform: translateY(-300%) rotate(180deg);
+        }
+    }
+
+    .dropmenu {
+        position: absolute;
+        z-index: 10;
+        background: $colorWhite;
+        width: 218px;
+        margin: 0;
+        border: 1px solid $colorGray;
+
+        .elem {
+            margin: 0;
+            padding: 10px 12px;
+        }
+    }
+
+    .radio-filter {
         margin: 20px 0 47px;
         display: block;
 
@@ -185,7 +219,7 @@ section {
     padding: 20px 18px;
     background: #F7F7F7;
     border-radius: 5px;
-    max-width: 510px;
+    max-width: 512px;
 
     .options {
         @include basicSettings;
@@ -205,6 +239,79 @@ section {
 
         .guid, .bism-id, .tam {
             color: $colorBlue;
+        }
+    }
+}
+
+.report {
+    background: #FFFFFF;
+    border: 1px dashed #939DA6;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    padding: 40px 40px 60px;
+    overflow: auto;
+
+    table {
+        width: 100%;
+        text-align: left;
+        table-layout: fixed;
+        box-sizing: border-box;
+        // overflow: auto;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    caption {
+        margin: 0 0 27px 0;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: left;
+    }
+    thead {
+        font-size: 13px;
+        line-height: 15px;
+        color: #939DA6;
+        vertical-align: top;
+
+        th:nth-child(1), th:nth-child(3), th:nth-child(4) {
+            width: 116px;
+        }
+        th:nth-child(2) {
+            width: 234px;
+        }
+        th:nth-child(5) {
+            width: 210px;
+        }
+    }
+    tbody {
+        font-size: 13px;
+        line-height: 17px;
+        color: $colorBlack;
+        vertical-align: top;
+
+        td {
+            padding: 20px 0 15px 0;
+            border-bottom: 1px dashed $colorGray;
+        }
+
+        td:nth-child(1) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+        td:nth-child(3), td:nth-child(4) {
+            padding: 0;
+            td:nth-child(1) {
+                width: 50px;
+            }
+            td {
+                border: 0;
+            }
+        }
+        td:nth-child(5) {
+            font-size: 12px;
+            line-height: 14px;
         }
     }
 }
